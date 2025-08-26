@@ -50,8 +50,14 @@
         align-items: center;
         gap: 3em;
       }
-      .content-header h2 {
-        font-weight: 500;
+      .content-header button {
+        font-weight: 400;
+        font-size: 1.6em;
+        padding: 6px 10px 6px 10px;
+        background-color: rgba(0, 0, 0, 0.381);
+        border: 0;
+        border-radius: 4px;
+        cursor: pointer;
       }
       .category {
         flex: 9;
@@ -65,8 +71,8 @@
     <h1 class="header">Inventory App</h1>
     <div class="content">
       <div class="content-header">
-        <h2><a href="/category">Category</a></h2>
-        <h2><a href="/item">Items</a></h2>
+        <button><a href="/category">Category</a></button>
+        <button><a href="/item">Items</a></button>
       </div>
       <%- include(value); %>
     </div>

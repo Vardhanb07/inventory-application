@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>create-item</title>
+  </head>
+  <body>
+    <h1>Create item</h1>
+    <form action="/item/create" method="post">
+      <div>
+        <label for="itemName">name</label>
+        <input type="text" name="itemName" id="itemName" />
+      </div>
+      <div>
+        <label for="itemCategory">category</label>
+        <select name="itemCategory" id="itemCategory">
+          <option value="">Choose a category</option>
+          <option value="test">test</option>
+        </select>
+      </div>
+      <input type="submit">
+    </form>
+    <a href="/item">Go Back</a>
+  </body>
+</html>
