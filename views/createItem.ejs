@@ -4,23 +4,99 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>create-item</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Lexend";
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+      }
+      h1 {
+        flex: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 500;
+        background-color: rgba(0, 0, 0, 0.364);
+      }
+      .form {
+        flex: 7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        border: 1px groove black;
+        padding: 20px;
+        border-radius: 4px;
+      }
+      form > div {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+      label,
+      input {
+        font-size: 24px;
+      }
+      input {
+        padding: 5px;
+      }
+      select {
+        font-size: 22px;
+        padding: 5px;
+      }
+      .return {
+        flex: 8;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+      }
+      .return > a {
+        font-size: 22px;
+        background-color: rgba(0, 0, 0, 0.318);
+        padding: 6px;
+        border-radius: 4px;
+      }
+    </style>
   </head>
   <body>
     <h1>Create item</h1>
-    <form action="/item/create" method="post">
-      <div>
-        <label for="itemName">name</label>
-        <input type="text" name="itemName" id="itemName" />
-      </div>
-      <div>
-        <label for="itemCategory">category</label>
-        <select name="itemCategory" id="itemCategory">
-          <option value="">Choose a category</option>
-          <option value="test">test</option>
-        </select>
-      </div>
-      <input type="submit">
-    </form>
-    <a href="/item">Go Back</a>
+    <div class="form">
+      <form action="/item/create" method="post">
+        <div>
+          <label for="itemName">Name</label>
+          <input type="text" name="itemName" id="itemName" required />
+        </div>
+        <div>
+          <label for="itemCategory">Category</label>
+          <select name="itemCategory" id="itemCategory" required>
+            <option value="">Choose category</option>
+            <option value="test">test</option>
+          </select>
+        </div>
+        <input type="submit" />
+      </form>
+    </div>
+    <div class="return">
+      <a href="/item">Go Back</a>
+    </div>
   </body>
 </html>
