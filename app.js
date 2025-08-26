@@ -13,7 +13,7 @@ app.use("/category", categoryRouter);
 app.use("/item", itemRouter);
 
 app.get("/", (req, res) => {
-  res.render("index", { value: "category" });
+  res.redirect("/category")
 });
 
 const port = process.env.PORT || 8000;
