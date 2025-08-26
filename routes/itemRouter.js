@@ -3,10 +3,10 @@ const itemController = require("../controllers/itemController");
 
 const itemRouter = Router();
 
-itemRouter.get("/", (req, res) => {
-  res.render("index", { value: "item" });
-});
+itemRouter.get("/", itemController.showItem);
 
 itemRouter.get("/create", itemController.create);
+
+itemRouter.post("/create", itemController.postItems);
 
 module.exports = itemRouter;
