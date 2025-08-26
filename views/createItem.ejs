@@ -89,7 +89,9 @@
           <label for="itemCategory">Category</label>
           <select name="itemCategory" id="itemCategory" required>
             <option value="">Choose category</option>
-            <option value="test">test</option>
+            <% for(let i = 0; i < categories.length; i++) { %>
+              <option value= <%= categories[i].id %> > <%= categories[i].name %> </option>
+            <% } %>
           </select>
         </div>
         <input type="submit" />

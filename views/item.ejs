@@ -1,7 +1,17 @@
 <html>
   <body>
     <div class="item">
-      <a href="/item/create">Create item</a>
+      <div class="sub-content">
+        <% for(let i = 0; i < itemData.length; i++) { %>
+          <div>
+            <p><%= itemData[i].name %> </p>
+            <p>Category: <%= categories.find(category => category.id == itemData[i]["category_id"]).name %> </p>
+          </div>
+        <% } %>
+      </div>
+      <div class="link">
+        <a href="/item/create">Create item</a>
+      </div>
     </div>
   </body>
 </html>

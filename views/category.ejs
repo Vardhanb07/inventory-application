@@ -1,7 +1,16 @@
 <html>
   <body>
     <div class="category">
-      <a href="/category/create">Create category</a>
+      <div class="sub-content">
+        <% for(let i = 0; i < categoryData.length; i++) { %>
+          <div>
+            <p><%= categoryData[i].name %> </p>
+          </div>
+        <% } %>
+      </div>
+      <div class="link">
+        <a href="/category/create">Create category</a>
+      </div>
     </div>
   </body>
 </html>
