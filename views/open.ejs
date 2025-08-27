@@ -50,6 +50,17 @@
         border: 1px groove black;
         padding: 6px;
         border-radius: 4px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 14px;
+      }
+      .content > div > a {
+        font-size: 20px;
+        background-color: rgba(0, 0, 0, 0.266);
+        padding: 5px;
+        border-radius: 4px;
       }
       .return {
         flex: 8;
@@ -57,7 +68,7 @@
         justify-content: center;
         align-items: flex-start;
       }
-      a {
+      .return > a {
         margin-bottom: 10px;
         padding: 4px 10px 4px 10px;
         background-color: rgba(0, 0, 0, 0.346);
@@ -72,6 +83,7 @@
       <% for(let i = 0; i < categoryData.length; i++) { %>
       <div>
         <p>Name: <%= categoryData[i].name %></p>
+        <a href= <%= `/item/delete/${categoryData[i].id}` %> >Delete</a>
       </div>
       <% } %>
     </div>

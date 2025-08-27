@@ -34,5 +34,5 @@ module.exports = {
   postCategory,
   showCategory,
   removeCategory,
-  showItems
+  showItems,
 };

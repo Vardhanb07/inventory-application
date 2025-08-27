@@ -18,7 +18,7 @@ async function getCategoryItems(category_id) {
   const { rows } = await pool.query("SELECT * FROM item WHERE category_id=$1", [
     category_id,
   ]);
-  return rows
+  return rows;
 }
 
 async function insertItem(name, categoryId) {

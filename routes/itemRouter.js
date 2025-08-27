@@ -9,4 +9,6 @@ itemRouter.get("/create", itemController.create);
 
 itemRouter.post("/create", itemController.postItems);
 
+itemRouter.get("/delete/:id", itemController.removeItem);
+
 module.exports = itemRouter;

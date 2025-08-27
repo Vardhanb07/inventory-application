@@ -13,11 +13,11 @@ app.use("/category", categoryRouter);
 app.use("/item", itemRouter);
 
 app.get("/", (req, res) => {
-  res.redirect("/category")
+  res.redirect("/category");
 });
 
 const port = process.env.PORT || 8000;
 
 app.listen(port, () => {
-  console.log(`App listening on port https://localhost:${port}`);
+  console.log(`App listening on port http://localhost:${port}`);
 });

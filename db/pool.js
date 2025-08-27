@@ -6,5 +6,5 @@ module.exports = new Pool({
   ssl: {
     rejectUnauthorized: false,
   },
-  // connectionString: process.env.LOCAL
+  // connectionString: process.env.LOCAL,
 });

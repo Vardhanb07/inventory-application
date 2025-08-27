@@ -1,4 +1,9 @@
-const { getCategories, insertItem, getItems } = require("../db/query");
+const {
+  getCategories,
+  insertItem,
+  getItems,
+  deleteItem,
+} = require("../db/query");
 
 async function create(req, res) {
   const data = await getCategories();
@@ -20,8 +25,14 @@ async function showItem(req, res) {
   });
 }
 
+async function removeItem(req, res) {
+  await deleteItem(req.params.id);
+  res.redirect(`/category/${req.params.id}`);
+}
+
 module.exports = {
   create,
   postItems,
-  showItem
+  showItem,
+  removeItem,
 };
