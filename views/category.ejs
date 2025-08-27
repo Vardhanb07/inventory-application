@@ -4,7 +4,11 @@
       <div class="sub-content">
         <% for(let i = 0; i < categoryData.length; i++) { %>
           <div>
-            <p><%= categoryData[i].name %> </p>
+            <p><%= categoryData[i].name %> </p>      
+            <div class="links">
+              <a href= <%= `/category/${categoryData[i].id}`%> >Open</a>
+              <a href= <%= `/category/delete/${categoryData[i].id}` %> >Delete</a>
+            </div>
           </div>
         <% } %>
       </div>

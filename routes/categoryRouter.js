@@ -9,4 +9,8 @@ categoryRouter.get("/create", categoryController.create);
 
 categoryRouter.post("/create", categoryController.postCategory);
 
+categoryRouter.get("/delete/:id", categoryController.removeCategory);
+
+categoryRouter.get("/:id", categoryController.showItems);
+
 module.exports = categoryRouter;
